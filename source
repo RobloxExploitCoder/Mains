@@ -1,0 +1,164 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Panel = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local OwlHub = Instance.new("TextButton")
+local Vynixu = Instance.new("TextButton")
+local Eclipse = Instance.new("TextButton")
+local InfiniteYield = Instance.new("TextButton")
+local Minimize = Instance.new("TextButton")
+local Max = Instance.new("Frame")
+local Open = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(109, 109, 109)
+Main.Position = UDim2.new(0.348588854, 0, 0.389041096, 0)
+Main.Size = UDim2.new(0, 357, 0, 137)
+Main.Active = true
+Main.Draggable = true
+
+Panel.Name = "Panel"
+Panel.Parent = Main
+Panel.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+Panel.BorderSizePixel = 0
+Panel.Size = UDim2.new(0, 357, 0, 25)
+
+TextButton.Parent = Panel
+TextButton.BackgroundColor3 = Color3.fromRGB(181, 181, 181)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.929971993, 0, 0.120000124, 0)
+TextButton.Size = UDim2.new(0, 18, 0, 18)
+TextButton.Font = Enum.Font.SciFi
+TextButton.Text = "X"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+TextButton.MouseButton1Click:Connect(function()
+	Main.Visible = false
+	Max.Visible = false
+end)
+
+TextLabel.Parent = Panel
+TextLabel.BackgroundColor3 = Color3.fromRGB(150, 150, 150)
+TextLabel.BackgroundTransparency = 0.650
+TextLabel.Position = UDim2.new(0, 0, -0.0399999991, 0)
+TextLabel.Size = UDim2.new(0, 103, 0, 25)
+TextLabel.Font = Enum.Font.Sarpanch
+TextLabel.Text = "StormHub"
+TextLabel.TextColor3 = Color3.fromRGB(167, 158, 208)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+OwlHub.Name = "OwlHub"
+OwlHub.Parent = Main
+OwlHub.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+OwlHub.Position = UDim2.new(0, 0, 0.262954414, 0)
+OwlHub.Size = UDim2.new(0, 124, 0, 39)
+OwlHub.Font = Enum.Font.SciFi
+OwlHub.Text = "Owl Hub"
+OwlHub.TextColor3 = Color3.fromRGB(255, 106, 0)
+OwlHub.TextSize = 27.000
+OwlHub.MouseButton1Click:Connect(function()
+	local old
+	old = hookfunction(game.HttpGetAsync, function(inst, url, state)
+		url = url:gsub('CriShoux', 'SiLeNSwOrD')
+		return old(inst, url, state)
+	end)
+
+	local old2
+	old2 = hookfunction(game.HttpGet, function(inst, url, state)
+		url = url:gsub('CriShoux', 'SiLeNSwOrD')
+		return old2(inst, url, state)
+	end)
+
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/SiLeNSwOrD/OwlHub/master/OwlHub.txt"))()
+end)
+
+Vynixu.Name = "Vynixu"
+Vynixu.Parent = Main
+Vynixu.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+Vynixu.Position = UDim2.new(0.380952388, 0, 0.262954384, 0)
+Vynixu.Size = UDim2.new(0, 124, 0, 39)
+Vynixu.Font = Enum.Font.SciFi
+Vynixu.Text = "Vynixu"
+Vynixu.TextColor3 = Color3.fromRGB(132, 4, 144)
+Vynixu.TextSize = 27.000
+Vynixu.MouseButton1Down:Connect(function()
+	loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
+end)
+
+Eclipse.Name = "Eclipse"
+Eclipse.Parent = Main
+Eclipse.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+Eclipse.Position = UDim2.new(0, 0, 0.634566724, 0)
+Eclipse.Size = UDim2.new(0, 124, 0, 39)
+Eclipse.Font = Enum.Font.SciFi
+Eclipse.Text = "Eclipse"
+Eclipse.TextColor3 = Color3.fromRGB(255, 0, 4)
+Eclipse.TextSize = 27.000
+Eclipse.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script", true))()
+end)
+
+InfiniteYield.Name = "InfiniteYield"
+InfiniteYield.Parent = Main
+InfiniteYield.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+InfiniteYield.Position = UDim2.new(0.380952388, 0, 0.634566724, 0)
+InfiniteYield.Size = UDim2.new(0, 124, 0, 39)
+InfiniteYield.Font = Enum.Font.SciFi
+InfiniteYield.Text = "InfiniteYield"
+InfiniteYield.TextColor3 = Color3.fromRGB(255, 238, 0)
+InfiniteYield.TextSize = 25.000
+InfiniteYield.TextWrapped = true
+InfiniteYield.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+Minimize.Name = "Minimize"
+Minimize.Parent = Main
+Minimize.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+Minimize.Position = UDim2.new(0.750700295, 0, 0.400990069, 0)
+Minimize.Size = UDim2.new(0, 82, 0, 51)
+Minimize.Font = Enum.Font.SciFi
+Minimize.Text = "Minimize"
+Minimize.TextColor3 = Color3.fromRGB(0, 187, 255)
+Minimize.TextScaled = true
+Minimize.TextSize = 22.000
+Minimize.TextWrapped = true
+Minimize.MouseButton1Click:Connect(function()
+	Main.Visible = false
+	Max.Visible = true
+end)
+
+Max.Name = "Max"
+Max.Parent = Main
+Max.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Max.Position = UDim2.new(2.09523821, 0, 3.00000024, 0)
+Max.Size = UDim2.new(0, 106, 0, 35)
+Max.Visible = false
+
+Open.Name = "Open"
+Open.Parent = Max
+Open.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+Open.Position = UDim2.new(-0.00583979487, 0, -0.0227607787, 0)
+Open.Size = UDim2.new(0, 106, 0, 35)
+Open.Font = Enum.Font.SciFi
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(255, 233, 222)
+Open.TextSize = 27.000
+Open.MouseButton1Click:Connect(function()
+	Main.Visible = true
+	Max.Visible = false
+end)
